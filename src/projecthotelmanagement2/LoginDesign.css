@@ -14,3 +14,7 @@
     .left-form{
         -fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5);
     }
+    
+    .right-form{
+        -fx-background-color: linear-gradient(to bottom right,#9231b5 ,  #2f3f89);
+    }
