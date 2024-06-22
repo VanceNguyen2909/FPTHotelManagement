@@ -2,6 +2,13 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
+.bg{
+    -fx-background-color: linear-gradient(to right,palevioletred ,  #512da8);
 
+}
+.buttonbox{
+     -fx-background-color: linear-gradient(to right,palevioletred , edc36f );
+}
+.TextColor{
+    
 }
