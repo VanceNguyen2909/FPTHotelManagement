@@ -38,8 +38,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleButtonSignIn(ActionEvent event) throws IOException {
-              try {
-            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("/HomeLogin/HomeLogin.fxml"));
+            try {
+            // Sửa đường dẫn ở đây nếu cần thiết
+            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("HomeLogin.fxml"));
             Scene homeLoginScene = new Scene(homeLoginParent);
 
             // Lấy thông tin của stage
@@ -50,7 +51,6 @@ public class FXMLDocumentController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML
