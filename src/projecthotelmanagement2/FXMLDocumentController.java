@@ -38,11 +38,19 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleButtonSignIn(ActionEvent event) throws IOException {
-        Parent loginParent = FXMLLoader.load(getClass().getResource("/SIGNIN/Login.fxml"));
-        Scene loginScene = new Scene(loginParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+              try {
+            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("/HomeLogin/HomeLogin.fxml"));
+            Scene homeLoginScene = new Scene(homeLoginParent);
+
+            // Lấy thông tin của stage
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+            window.setScene(homeLoginScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @FXML
