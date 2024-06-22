@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="896.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="HomeLogin.HomeLoginController">
+<AnchorPane id="AnchorPane" prefHeight="866.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeLogin.HomeLoginController">
     <stylesheets>
         <URL value="@homelogin.css" />
     </stylesheets>
    <children>
-      <Label alignment="CENTER" layoutX="145.0" layoutY="60.0" prefHeight="69.0" prefWidth="557.0" text="WELCOME FPT HOTEL" textFill="#ee0909" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="69.0" prefWidth="557.0" text="WELCOME FPT HOTEL" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="System Bold Italic" size="47.0" />
          </font>
@@ -21,26 +21,30 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Button layoutX="520.0" layoutY="191.0" mnemonicParsing="false" onAction="#handleButtonCustomer" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="Customer" textFill="WHITE">
+      <Button layoutX="769.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleButtonCustomer" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="Customer" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
       </Button>
-      <Button layoutX="122.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleButtonEmployee" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="EMPLOYEE" textFill="WHITE">
+      <Button layoutX="145.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleButtonEmployee" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="EMPLOYEE" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
       </Button>
-      <Button layoutX="520.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleButtonManeger" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="Maneger" textFill="WHITE">
+      <Button layoutX="769.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleButtonManeger" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="Maneger" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
       </Button>
-      <Button layoutX="122.0" layoutY="191.0" mnemonicParsing="false" onAction="#handleButtonAdmin" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="ADMIN" textFill="WHITE">
+      <Button layoutX="145.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleButtonAdmin" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="ADMIN" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
       </Button>
+      <Label layoutX="387.0" layoutY="118.0" prefHeight="65.0" prefWidth="380.0" text="Choice Your role" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="48.0" />
+         </font></Label>
    </children>
    <styleClass>
       <String fx:value="mainFxmlClass" />
