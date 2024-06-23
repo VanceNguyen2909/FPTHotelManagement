@@ -31,7 +31,7 @@
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
       </Button>
-      <Button layoutX="769.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleButtonManeger" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="Maneger" textFill="WHITE">
+      <Button layoutX="769.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleButtonManeger" prefHeight="160.0" prefWidth="249.0" style="-fx-background-radius: 40px;" styleClass="buttonbox" text="Manager" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
@@ -41,7 +41,7 @@
             <Font name="Berlin Sans FB Demi Bold" size="32.0" />
          </font>
       </Button>
-      <Label layoutX="387.0" layoutY="118.0" prefHeight="65.0" prefWidth="380.0" text="Choice Your role" textFill="WHITE">
+      <Label layoutX="387.0" layoutY="118.0" prefHeight="65.0" prefWidth="380.0" text="Choose Your role" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Bold" size="48.0" />
          </font></Label>
