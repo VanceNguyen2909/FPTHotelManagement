@@ -1,4 +1,9 @@
-package CustomerLogin;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
+package AdminLogin;
+
 
 import Database.ConnectDB;
 import java.io.IOException;
@@ -16,28 +21,37 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class CustomerLoginController implements Initializable {
+
+/**
+ * FXML Controller class
+ *
+ * @author admin
+ */
+public class AdminLoginController implements Initializable {
 
     @FXML
-    private TextField CusUsername;
+    private TextField AdUsername;
     @FXML
-    private TextField CusPassword;
-
+    private TextField AdPassword;
+    
     private ConnectDB connectDB;
-   
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         connectDB = new ConnectDB(); // Initialize connectDB
-    }
+    }    
 
     @FXML
-    private void handleLoginCustomer(ActionEvent event) {
-        String username = CusUsername.getText();
-        String password = CusPassword.getText();
+
+    private void handleLoginAdmin(ActionEvent event) {
+        String username = AdUsername.getText();
+        String password = AdPassword.getText();
 
         if (login(username, password)) {
             showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome!");
@@ -47,7 +61,7 @@ public class CustomerLoginController implements Initializable {
     }
 
     private boolean login(String username, String password) {
-        String query = "SELECT * FROM Login_Customer WHERE customer_username = ? AND customer_password = ?";
+        String query = "SELECT * FROM Admin WHERE admin_name = ? AND admin_password = ?";
         try (Connection connection = connectDB.GetConnectDB(); // Use GetConnectDB method
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, username);
@@ -85,4 +99,5 @@ public class CustomerLoginController implements Initializable {
             e.printStackTrace();
         }
     }
+    
 }

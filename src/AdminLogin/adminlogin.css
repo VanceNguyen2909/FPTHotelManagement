@@ -1,0 +1,6 @@
+/*
+ * Empty Stylesheet file.
+ */
+.bgAdminLogin {
+    -fx-background-color: linear-gradient(to right,palevioletred ,  #512da8);
+}

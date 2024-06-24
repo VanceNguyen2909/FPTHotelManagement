@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="bgCustomerLogin" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="CustomerLogin.CustomerLoginController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="bgCustomerLogin" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerLogin.CustomerLoginController">
     <stylesheets>
         <URL value="@customerlogin.css" />
     </stylesheets>
    <children>
-      <Label layoutX="261.0" layoutY="50.0" text="Login" textFill="WHITE">
+      <Label layoutX="164.0" layoutY="46.0" text="Customer Login" textFill="WHITE">
          <font>
             <Font size="37.0" />
          </font>
@@ -29,6 +29,7 @@
       </Label>
       <TextField fx:id="CusUsername" layoutX="178.0" layoutY="146.0" prefHeight="26.0" prefWidth="231.0" />
       <TextField fx:id="CusPassword" layoutX="180.0" layoutY="220.0" prefHeight="26.0" prefWidth="231.0" />
-      <Button layoutX="263.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleLoginCustomer" prefHeight="45.0" prefWidth="91.0" style="-fx-font-size: 180%; -fx-background-radius: 10px;" text="Login" />
+      <Button layoutX="263.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleLoginCustomer" prefHeight="45.0" prefWidth="91.0" style="-fx-font-size: 180%; -fx-background-color: #3399FF; -fx-text-fill: white; -fx-background-radius: 10px;" text="Login" />
+      <Button layoutX="27.0" layoutY="20.0" minHeight="19.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="62.0" style="-fx-font-size: 10px; -fx-text-fill: white; -fx-background-color: #3399FF; -fx-background-radius: 10px;" text="Back" />
    </children>
 </AnchorPane>
