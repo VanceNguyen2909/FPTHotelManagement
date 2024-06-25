@@ -1,5 +1,10 @@
-package ManagerLogin;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
+package EmployeeLogin;
 
+import Database.ConnectDB;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,31 +17,38 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import Database.ConnectDB;
 
-public class ManagerLoginController implements Initializable {
+/**
+ * FXML Controller class
+ *
+ * @author ADMIN
+ */
+public class EmployeeLoginController implements Initializable {
 
+    @FXML
+    private TextField EUsername;
+    @FXML
+    private TextField EPassword;
     @FXML
     private ChoiceBox<String> myChoiceBox;
-    @FXML
-    private TextField MUsername;
-    @FXML
-    private TextField MPassword;
-
+    
     private String[] region = {"Ho Chi Minh", "Da Nang", "Ha Noi"};
-
+    
     private ConnectDB connectDB;
 
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         myChoiceBox.getItems().addAll(region);
         connectDB = new ConnectDB();
-    }
+    }    
 
     @FXML
-    private void HandleManagerLogin(ActionEvent event) {
-        String username = MUsername.getText();
-        String password = MPassword.getText();
+    private void HandleEmployeeLogin(ActionEvent event) {
+        String username = EUsername.getText();
+        String password = EPassword.getText();
         String selectedRegion = myChoiceBox.getValue();
 
         if (username.isEmpty()) {
@@ -55,7 +67,7 @@ public class ManagerLoginController implements Initializable {
         }
 
         try (Connection conn = connectDB.GetConnectDB()) {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT region_name FROM Manager WHERE manager_username = ? AND manager_password = ?");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT region_name FROM Employee WHERE employee_username = ? AND employee_password = ?");
             pstmt.setString(1, username);
             pstmt.setString(2, password);
 
@@ -83,7 +95,5 @@ public class ManagerLoginController implements Initializable {
         alert.setContentText(message);
         alert.showAndWait();
     }
-    
-    
     
 }

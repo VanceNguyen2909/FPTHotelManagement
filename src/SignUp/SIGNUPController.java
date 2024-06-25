@@ -27,6 +27,7 @@ public class SIGNUPController implements Initializable {
     private TextField CusCPass;
     @FXML
     private TextField CusPhone;
+    
 
     private ConnectDB connectDB;
 
@@ -43,14 +44,37 @@ public class SIGNUPController implements Initializable {
         String password = CusPass.getText();
         String confirmPassword = CusCPass.getText();
         String phone = CusPhone.getText();
+        
+
+        if (name.isEmpty()) {
+            showAlert("Error", "Full name cannot be empty");
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            showAlert("Error", "Invalid email format");
+            return;
+        }
+        
+        if (username.isEmpty()) {
+            showAlert("Error", "Username cannot be empty");
+            return;
+        }
+
+        if (username.isEmpty()) {
+            showAlert("Error", "Username cannot be empty");
+            return;
+        }
 
         if (!password.equals(confirmPassword)) {
             showAlert("Error", "Password and Confirm Password do not match");
             return;
         }
 
-        if (!isValidEmail(email)) {
-            showAlert("Error", "Invalid email format");
+        
+
+        if (!isNumeric(phone)) {
+            showAlert("Error", "Phone number must contain only digits");
             return;
         }
 
@@ -84,5 +108,9 @@ public class SIGNUPController implements Initializable {
             return false;
         }
         return pat.matcher(email).matches();
+    }
+
+    private boolean isNumeric(String str) {
+        return str != null && str.matches("[0-9]+");
     }
 }
