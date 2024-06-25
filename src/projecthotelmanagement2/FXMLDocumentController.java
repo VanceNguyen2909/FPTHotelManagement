@@ -14,11 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Modality;
+
 import javafx.stage.Stage;
 
 /**
@@ -54,7 +51,20 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void handleButtonSIGNUP(ActionEvent event) {
+    private void handleButtonSIGNUP(ActionEvent event) throws IOException {
+            try {
+            // Sửa đường dẫn ở đây nếu cần thiết
+            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("/SignUp/SIGNUP.fxml"));
+            Scene homeLoginScene = new Scene(homeLoginParent);
+
+            // Lấy thông tin của stage
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+            window.setScene(homeLoginScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
 }

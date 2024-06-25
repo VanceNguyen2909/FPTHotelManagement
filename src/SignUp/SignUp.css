@@ -1,0 +1,12 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 23 thg 6, 2024, 20:21:39
+    Author     : Long
+*/
+
+.bgCustomerSignUp {
+    -fx-background-color: linear-gradient(to right,palevioletred ,  #512da8);
+}

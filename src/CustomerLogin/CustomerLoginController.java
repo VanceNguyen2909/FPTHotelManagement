@@ -47,7 +47,7 @@ public class CustomerLoginController implements Initializable {
     }
 
     private boolean login(String username, String password) {
-        String query = "SELECT * FROM Login_Customer WHERE customer_username = ? AND customer_password = ?";
+        String query = "SELECT * FROM Customer WHERE customer_username = ? AND customer_password = ?";
         try (Connection connection = connectDB.GetConnectDB(); // Use GetConnectDB method
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, username);
