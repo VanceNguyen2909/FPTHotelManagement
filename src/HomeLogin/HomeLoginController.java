@@ -40,13 +40,37 @@ public class HomeLoginController {
     
 
     @FXML
-    void handleButtonEmployee(ActionEvent event) {
+    private void handleButtonEmployee(ActionEvent event) throws IOException {
+            try {
+            // Sửa đường dẫn ở đây nếu cần thiết
+            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("/EmployeeLogin/EmployeeLogin.fxml"));
+            Scene homeLoginScene = new Scene(homeLoginParent);
 
+            // Lấy thông tin của stage
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+            window.setScene(homeLoginScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void handleButtonManeger(ActionEvent event) {
+    private void handleButtonManeger(ActionEvent event) throws IOException {
+            try {
+            // Sửa đường dẫn ở đây nếu cần thiết
+            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("/ManagerLogin/ManagerLogin.fxml"));
+            Scene homeLoginScene = new Scene(homeLoginParent);
 
+            // Lấy thông tin của stage
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+            window.setScene(homeLoginScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
     @FXML

@@ -9,7 +9,7 @@ public class ConnectDB {
 
     public Connection GetConnectDB() {
         try {
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=HMSP";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=HMSP1";
             String user = "sa"; // Đảm bảo rằng bạn đang sử dụng đúng tên đăng nhập
             String password = "1"; // Đảm bảo rằng bạn đang sử dụng đúng mật khẩu
 //            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

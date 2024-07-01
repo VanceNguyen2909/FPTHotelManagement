@@ -5,6 +5,7 @@
 package EmployeeLogin;
 
 import Database.ConnectDB;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,10 +14,15 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -94,6 +100,22 @@ public class EmployeeLoginController implements Initializable {
         alert.setTitle(title);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+       @FXML
+    private void handleBackButton(ActionEvent event) throws IOException {
+            try {
+            // Sửa đường dẫn ở đây nếu cần thiết
+            Parent homeLoginParent = FXMLLoader.load(getClass().getResource("/HomeLogin/HomeLogin.fxml"));
+            Scene homeLoginScene = new Scene(homeLoginParent);
+
+            // Lấy thông tin của stage
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+            window.setScene(homeLoginScene);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
 }

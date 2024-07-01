@@ -9,12 +9,14 @@ import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+
 import javafx.scene.control.TextField;
 
 public class SIGNUPController implements Initializable {
-
+    
     @FXML
     private TextField Fname;
     @FXML
@@ -30,6 +32,7 @@ public class SIGNUPController implements Initializable {
     
 
     private ConnectDB connectDB;
+   
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -113,4 +116,7 @@ public class SIGNUPController implements Initializable {
     private boolean isNumeric(String str) {
         return str != null && str.matches("[0-9]+");
     }
+
+
+  
 }
