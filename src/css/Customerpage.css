@@ -1,0 +1,96 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 1, 2024, 2:18:48 PM
+    Author     : admin
+*/
+.top_from{
+    -fx-background-color: #fff;
+    -fx-border-color:#000;
+}
+.nav_from{
+    -fx-background-color: linear-gradient(to right, #434343 0%, black 100%);
+}
+.nav-btn{
+     -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-opacity: 1; /* Đảm bảo opacity là 1 */
+    
+}
+.nav-btn-image{
+      -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text: white;
+    -fx-font-size: 14px;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-opacity: 1; 
+}
+.nav-top{
+    -fx-background-color:linear-gradient(to bottom, #C0C0C0, #E0E0E0, #C0C0C0); 
+}
+
+.customBG{
+    -fx-background-color: linear-gradient(to right, #434343 0%, black 100%);
+}
+.nav-top-btn{
+     -fx-background-color:transparent;
+     -fx-cursor:hand;
+     -fx-text-fill:black;
+     -fx-font-size:14px;
+}
+.nav_from_map{
+    -fx-background-color: linear-gradient(to right, #434343 0%, black 100%);
+      -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+.nav_from_map_center{
+    -fx-background-color:green;
+      -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+.nav_map_top_btn{
+    -fx-background-color: linear-gradient(#d3d3d3, #a9a9a9);
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.nav_map_top_btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.nav_map_top_btn_setting{
+         -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.nav_map_top_btn_sort{
+         -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}

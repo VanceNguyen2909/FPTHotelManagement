@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="947.0" prefWidth="1670.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlle.ServiceController">
+    <stylesheets>
+        <URL value="@service.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="947.0" prefWidth="1670.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane layoutX="395.0" layoutY="191.0" prefHeight="947.0" prefWidth="1670.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <AnchorPane prefHeight="58.0" prefWidth="1670.0" style="-fx-background-color: #f4f3fc; -fx-border-color: #b9b9bf;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="71.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/3d-cartoon-shopping-cart-isolated-white-background-vector-3d-illustration_221648-568-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="19.0" text="Services &amp; inventony" textFill="#ee0000">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_RIGHT" layoutX="900.0" prefHeight="58.0" prefWidth="770.0" spacing="10.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" styleClass="top_btn" stylesheets="@service.css" text="Print">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#393030" glyphName="PRINT" />
+                                       </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" styleClass="top_btn" stylesheets="@service.css" text="Sort">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#00c8ff" glyphName="BARS" />
+                                       </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="188.0" styleClass="top_btn" stylesheets="@service.css" text="List of  services types">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#1f1bff" glyphName="EXCHANGE" />
+                                       </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" styleClass="top_btn" stylesheets="@service.css" text="Inventony input history">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#00d0ff" glyphName="HISTORY" />
+                                       </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#HandleFresh" styleClass="top_btn" stylesheets="@service.css" text="Refresh">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#25abf8" glyphName="REFRESH" />
+                                       </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#handleAddAction" prefHeight="27.0" prefWidth="81.0" styleClass="top_btn_add" stylesheets="@service.css" text="Add" textFill="#fffefe">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" layoutX="311.0" layoutY="49.0" />
+                              <Label layoutX="627.0" layoutY="30.0" prefHeight="47.0" prefWidth="708.0" text="Service statistics in the period từ 27/06/2024 đến 02/07/2024">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" styleClass="nav_btn_top" text="[ Select a diffrent time ]" textFill="#1d6821">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </graphic>
+                              </Label>
+                              <Label layoutX="7.0" layoutY="91.0" prefHeight="23.0" prefWidth="56.0" text="Display" />
+                              <Label layoutX="113.0" layoutY="91.0" prefHeight="23.0" prefWidth="56.0" text="services" />
+                              <MenuButton layoutX="52.0" layoutY="90.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: black;" text="Sort">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
+                              </MenuButton>
+                              <Label layoutX="1410.0" layoutY="108.0" text="Search :" />
+                              <TextField layoutX="1453.0" layoutY="104.0" prefHeight="25.0" prefWidth="212.0" promptText="Enter Search" />
+                              <AnchorPane layoutY="129.0" prefHeight="756.0" prefWidth="1672.0">
+                                 <children>
+                                    <TableView fx:id="ServicesTable" prefHeight="693.0" prefWidth="1672.0">
+                                      <columns>
+                                        <TableColumn fx:id="sttColumn" prefWidth="75.0" text="Id" />
+                                        <TableColumn fx:id="serviceNameColumn" prefWidth="165.0" text="serviceName" />
+                                          <TableColumn fx:id="ServiceTypeColumn" prefWidth="148.0" text="Type" />
+                                          <TableColumn fx:id="servicePriceColumn" prefWidth="165.0" text="Price" />
+                                          <TableColumn fx:id="initialStockColumn" prefWidth="155.0" text="initialStock" />
+                                          <TableColumn fx:id="importedDuringPeriodColumn" prefWidth="84.0" text="importedDuringPeriod">
+                                             <columns>
+                                                <TableColumn fx:id="importedDuringPeriodButton" minWidth="1.0" prefWidth="77.0" />
+                                                <TableColumn fx:id="importedDuringPeriodInt" prefWidth="73.0" />
+                                             </columns></TableColumn>
+                                          <TableColumn fx:id="soldDuringPeriodColumn" prefWidth="148.0" text="soldDuringPeriodColumn">
+                                             <columns>
+                                                <TableColumn fx:id="soldDuringPeriodButton" prefWidth="75.0" />
+                                                <TableColumn fx:id="soldDuringPeriodButtonInt" prefWidth="75.0" />
+                                             </columns></TableColumn>
+                                          <TableColumn fx:id="revenueDuringPeriodColumn" prefWidth="188.0" text="revenueDuringPeriod" />
+                                          <TableColumn fx:id="finalStockColumn" minWidth="0.0" prefWidth="195.0" text="finalStock" />
+                                          <TableColumn fx:id="ServiceNote" prefWidth="130.0" text="Note" />
+                                          <TableColumn fx:id="actionsColumn" prefWidth="175.0" text="Ation">
+                                             <columns>
+                                                <TableColumn fx:id="EditService" minWidth="0.0" prefWidth="74.0" />
+                                                <TableColumn fx:id="DeletedService" minWidth="0.0" prefWidth="76.0" />
+                                             </columns></TableColumn>
+                                      </columns>
+                                    </TableView>
+                                    <GridPane layoutX="320.0" layoutY="258.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

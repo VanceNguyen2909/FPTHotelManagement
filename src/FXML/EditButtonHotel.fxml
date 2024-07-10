@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="day8.MainController">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="261.0" layoutY="14.0" prefHeight="45.0" prefWidth="178.0" text="Product Managment">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="241.0" layoutY="59.0" prefHeight="25.0" prefWidth="198.0" />
+      <Button layoutX="439.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+      <Label layoutX="34.0" layoutY="120.0" prefHeight="17.0" prefWidth="52.0" text="Name" />
+      <TextField fx:id="txtName" layoutX="86.0" layoutY="116.0" />
+      <Label fx:id="label1" layoutX="126.0" layoutY="161.0" minHeight="16" minWidth="69" />
+      <Label layoutX="17.0" layoutY="161.0" prefHeight="17.0" prefWidth="69.0" text="Description" />
+      <TextField fx:id="txtDescription" layoutX="86.0" layoutY="157.0" />
+      <Label fx:id="label11" layoutX="126.0" layoutY="204.0" minHeight="16" minWidth="69" />
+      <Label layoutX="17.0" layoutY="204.0" prefHeight="17.0" prefWidth="69.0" text="Price" />
+      <TextField fx:id="txtPrice" layoutX="86.0" layoutY="200.0" />
+      <Button layoutX="52.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleAdd" text="Add" />
+      <Button layoutX="126.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleUpdate" text="Update" />
+      <Button layoutX="209.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+   </children>
+</AnchorPane>

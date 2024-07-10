@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlle.ImportDPController">
+    <stylesheets>
+        <URL value="@importdp.css" />
+    </stylesheets>
+   <children>
+      <StackPane layoutX="83.0" layoutY="72.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="57.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="57.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="57.0" fitWidth="65.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Downloads/3d-cartoon-shopping-cart-isolated-white-background-vector-3d-illustration_221648-568-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="84.0" layoutY="17.0" prefHeight="25.0" prefWidth="138.0" text="service inventory:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelserviceinventony" layoutX="225.0" layoutY="14.0" prefHeight="30.0" prefWidth="95.0" text="label">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="385.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox layoutX="14.0" prefHeight="61.0" prefWidth="267.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleInputInventory" prefHeight="31.0" prefWidth="156.0" styleClass="nav_top_btn" stylesheets="@../css/importdp.css" text="Input inventony" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SHOPPING_CART" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="TableSinventory" layoutY="53.0" prefHeight="381.0" prefWidth="1000.0">
+                          <columns>
+                            <TableColumn fx:id="SinventorytcId" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="SinventorytcQuan" prefWidth="109.0" text="Quantity" />
+                              <TableColumn fx:id="SinventorytcPrice" prefWidth="122.0" text="Price" />
+                              <TableColumn fx:id="SinventorytcTotal" prefWidth="101.0" text="Total" />
+                              <TableColumn fx:id="SinventorytcTime" prefWidth="211.0" text="Time" />
+                              <TableColumn fx:id="SinventorytcUser" prefWidth="139.0" text="UserInput" />
+                              <TableColumn fx:id="SinventorytcNote" prefWidth="128.0" text="Note" />
+                              <TableColumn fx:id="SinventorytcAction" prefWidth="114.0" text="Action">
+                                 <columns>
+                                    <TableColumn fx:id="Editbutton" prefWidth="59.0" />
+                                    <TableColumn fx:id="DeleteButton" prefWidth="91.0" />
+                                 </columns></TableColumn>
+                          </columns>
+                        </TableView>
+                        <Button layoutX="902.0" mnemonicParsing="false" onAction="#HandleFresh" text="Refresh">
+                           <graphic>
+                              <FontAwesomeIcon fill="#25abf8" glyphName="REFRESH" />
+                           </graphic>
+                           <stylesheets>
+                              <URL value="@service.css" />
+                              <URL value="@../css/importdp.css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="top_btn" />
+                              <String fx:value="nav_top_btn" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

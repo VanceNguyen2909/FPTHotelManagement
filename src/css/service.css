@@ -1,0 +1,72 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.top_btn_add{
+      -fx-background-color: linear-gradient(#6ba9e7, #3a88d7);
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.top_btn{
+    -fx-background-color: linear-gradient(#d3d3d3, #a9a9a9);
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.nav_btn_top{
+       -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 10px;
+    -fx-opacity: 1; /* Đảm bảo opacity là 1 */
+}
+.input_inventory_btn{
+    -fx-background-color: linear-gradient(#6ba9e7, #3a88d7);
+    -fx-cusor:hand;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.input_inventory_btn:hover{
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.cancel_inventory_btn {
+    -fx-background-color: linear-gradient(#ff0000, #cc0000);
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.cancel_inventory_btn:hover {
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+

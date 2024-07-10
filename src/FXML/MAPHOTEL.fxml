@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customerpage.MAPHOTELController">
+   <children>
+      <StackPane layoutX="332.0" layoutY="202.0" prefHeight="1000.0" prefWidth="1600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="44.0" prefWidth="1600.0" stylesheets="@Customerpage.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="82.0" prefWidth="1600.0" style="-fx-background-color: white;" stylesheets="@Customerpage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="73.0" fitWidth="77.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/ProjecLogo-removebg-preview%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <AnchorPane prefHeight="200.0" prefWidth="1173.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="77.0" prefWidth="1605.0">
+                           <children>
+                              <HBox layoutX="78.0" layoutY="3.0" prefHeight="42.0" prefWidth="1606.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="statusbooking" mnemonicParsing="false" onAction="#HandleStatusBooking" prefHeight="33.0" prefWidth="212.0" styleClass="nav_map_top_btn" stylesheets="@../css/Customerpage.css" text="Current status &amp; Booking">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#f8d25f" glyphName="FLAG" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#WatingListMap" prefHeight="33.0" prefWidth="130.0" styleClass="nav_map_top_btn" stylesheets="@../css/Customerpage.css" text="Wating List">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#dcf86c" glyphName="USER" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#ListCheckinMap" prefHeight="33.0" prefWidth="130.0" styleClass="nav_map_top_btn" stylesheets="@../css/Customerpage.css" text="List Checkin">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#41cd56" glyphName="USER_PLUS" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#ListCusMap" prefHeight="33.0" prefWidth="130.0" styleClass="nav_map_top_btn" stylesheets="@../css/Customerpage.css" text="List Cus">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#20a9ff" glyphName="USERS" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#CreateaninvoiceMap" prefHeight="33.0" prefWidth="162.0" styleClass="nav_map_top_btn" stylesheets="@../css/Customerpage.css" text="Create an invoice">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#f5228b" glyphName="FILE" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" layoutX="1.0" layoutY="40.0" prefHeight="36.0" prefWidth="1605.0">
+                                 <children>
+                                    <MenuButton fx:id="sortmap" mnemonicParsing="false" onAction="#SortMap" styleClass="nav_map_top_btn_sort" stylesheets="@../css/Customerpage.css" text="SortMap">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Sort by Floor" />
+                                        <MenuItem mnemonicParsing="false" text="Sort by Room all" />
+                                      </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                              <AnchorPane layoutX="1.0" layoutY="-2.0" prefHeight="42.0" prefWidth="53.0" styleClass="nav_map_top_btn_setting" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label layoutX="19.0" layoutY="15.0">
+                                       <graphic>
+                                          <FontAwesomeIcon fx:id="SettingMap" glyphName="COG" size="2EM" text="" />
+                                       </graphic>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" text="Rename Room All" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <VBox layoutY="77.0" prefHeight="849.0" prefWidth="189.0">
+                           <children>
+                              <AnchorPane prefHeight="149.0" prefWidth="189.0" styleClass="nav_from_map" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Floor1Map" layoutX="56.0" layoutY="60.0" text="FLOOR 1" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" onAction="#RenameFloor" text="Rename floor">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="EXCHANGE" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#AddRoom" text="Add Room">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#29b921" glyphName="PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="149.0" prefWidth="189.0" styleClass="nav_from_map" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Floor2Map" layoutX="56.0" layoutY="60.0" text="FLOOR 2" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#RenameFloor" text="Rename floor">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="EXCHANGE" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#AddRoom" text="Add Room">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#29b921" glyphName="PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="149.0" prefWidth="189.0" styleClass="nav_from_map" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Floor3Map" layoutX="54.0" layoutY="60.0" text="FLOOR 3" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#RenameFloor" text="Rename floor">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="EXCHANGE" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#AddRoom" text="Add Room">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#29b921" glyphName="PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="189.0" layoutY="77.0" prefHeight="149.0" prefWidth="1131.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room101Map" layoutX="83.0" layoutY="60.0" text="101" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#CheckinRoom" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#BookingRoom" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#StatusRoom" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#EditRoom" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#DeletedRoom" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room102Map" layoutX="83.0" layoutY="60.0" text="102" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#CheckinRoom" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#BookingRoom" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#StatusRoom" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#EditRoom" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#DeletedRoom" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room103Map" layoutX="83.0" layoutY="60.0" text="103" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#CheckinRoom" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#BookingRoom" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" onAction="#StatusRoom" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="189.0" layoutY="226.0" prefHeight="149.0" prefWidth="1131.0" stylesheets="@../customerpage/Customerpage.css">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room201Map" layoutX="83.0" layoutY="60.0" text="201" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room202Map" layoutX="83.0" layoutY="60.0" text="202" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room203Map" layoutX="83.0" layoutY="60.0" text="203" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="189.0" layoutY="375.0" prefHeight="149.0" prefWidth="1131.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room301Map" layoutX="83.0" layoutY="60.0" text="301" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room302Map" layoutX="83.0" layoutY="60.0" text="302" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav_from_map_center" stylesheets="@../css/Customerpage.css">
+                                 <children>
+                                    <Label fx:id="Room303Map" layoutX="83.0" layoutY="60.0" text="303" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Check-in">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#30e156" glyphName="USER_PLUS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Booking">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#f4ff20" glyphName="USERS" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Status">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ffda36" glyphName="FLAG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Edit">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#5dd8fa" glyphName="COG" />
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false" text="Deleted">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff2c19" glyphName="TIMES" />
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </bottom>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

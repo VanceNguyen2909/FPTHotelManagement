@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controlle.AddPageController">
+    <stylesheets>
+        <URL value="@addpage.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="450.0" prefWidth="700.0">
+         <children>
+            <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+            <Label layoutX="261.0" layoutY="14.0" prefHeight="45.0" prefWidth="178.0" text="Add Service">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </Label>
+            <Label layoutX="134.0" layoutY="122.0" prefHeight="35.0" prefWidth="69.0" text="Name">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="SName" layoutX="270.0" layoutY="114.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Label fx:id="label1" layoutX="126.0" layoutY="161.0" minHeight="16" minWidth="69" />
+            <Label layoutX="133.0" layoutY="196.0" prefHeight="35.0" prefWidth="123.0" text="Type">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="SType" layoutX="270.0" layoutY="188.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Label fx:id="label11" layoutX="126.0" layoutY="204.0" minHeight="16" minWidth="69" />
+            <Label layoutX="134.0" layoutY="269.0" prefHeight="17.0" prefWidth="69.0" text="Price">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="SPrice" layoutX="270.0" layoutY="261.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Button layoutX="317.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleAdd" text="Add">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
